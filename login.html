@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tela de Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* Estilos para a página de login */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #00463a;
+    }
+
+    .login-box {
+      background-color: rgb(3, 216, 205);
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 112, 97, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input[type=email], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 12px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+      box-sizing: border-box;
+    }
+
+    a[type=submit] {
+      background-color: #007bff;
+      color: white;
+      padding: 8px 230px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    a[type=submit]:hover {
+      background-color: #003975;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h1>Login</h1>
+    <form>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required>
+      <a type="submit" href="index.html">Entrar</a>
+ 
+    </form>
+  </div>
+  <script>
+    const loginButton = document.getElementById('login-button');
+    loginButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      console.log(`Email: ${email}, Senha: ${password}`);
+    });
+  </script>
+  </script>
+</body>
+</html>
